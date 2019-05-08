@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="350sp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        app:cardCornerRadius="2sp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/uom"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/item_type"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/item_type_id"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_margin="30sp"
+                android:background="@drawable/select_button"
+                android:textColor="@color/colorPrimary"
+                android:text="OK"
+                android:layout_height="40sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

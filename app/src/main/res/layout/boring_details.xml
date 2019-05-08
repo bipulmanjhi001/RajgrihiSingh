@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Calendar"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/calendar"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="0dp"
+                    android:paddingLeft="6sp"
+                    android:singleLine="true"
+                    android:nextFocusDown="@+id/block"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/boring_date"
+                    android:layout_width="120dp"
+                    android:text="DATE"
+                    android:textSize="12sp"
+                    android:padding="4sp"
+                    android:singleLine="true"
+                    android:background="@drawable/select_button"
+                    android:layout_height="30dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Block"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/block"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="0dp"
+                android:paddingLeft="6sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/panchayat"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Panchayat"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/panchayat"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="0dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/village"
+                android:paddingLeft="6sp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Village"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/village"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/tola"
+                android:paddingLeft="6sp"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Tola"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/tola"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="0dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/location"
+                android:paddingLeft="6sp"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/locationss"
+                android:layout_width="120dp"
+                android:text="Location"
+                android:textSize="12sp"
+                android:padding="4sp"
+                android:singleLine="true"
+                android:background="@drawable/select_button"
+                android:layout_height="30dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Location"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="80dp"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:nextFocusDown="@+id/cashing"
+                    android:paddingLeft="6sp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Cashing"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/cashing"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="0dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/depth"
+                android:inputType="number"
+                android:paddingLeft="6sp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Depth"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/depth"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginLeft="0dp"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:nextFocusDown="@+id/water"
+                    android:inputType="number"
+                    android:paddingLeft="6sp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="Water"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/water"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginLeft="0dp"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:nextFocusDown="@+id/start_rpm"
+                        android:inputType="number"
+                        android:paddingLeft="6sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="Start RPM"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/start_rpm"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="80dp"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="12sp"
+                            android:singleLine="true"
+                            android:nextFocusDown="@+id/end_rpm"
+                            android:inputType="number"
+                            android:paddingLeft="6sp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="End RPM"
+                            android:layout_height="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/end_rpm"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:layout_width="0dp"
+                                android:layout_marginRight="80dp"
+                                android:layout_marginLeft="0dp"
+                                android:textSize="12sp"
+                                android:singleLine="true"
+                                android:nextFocusDown="@+id/hour"
+                                android:inputType="number"
+                                android:paddingLeft="6sp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="2"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:text="Hour"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/hour"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/black"
+                                    android:layout_width="0dp"
+                                    android:layout_marginRight="80dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:textSize="12sp"
+                                    android:singleLine="true"
+                                    android:nextFocusDown="@+id/choose_items"
+                                    android:inputType="number"
+                                    android:paddingLeft="6sp"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_weight="2"
+                                    android:layout_width="match_parent"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:text="Item"
+                                    android:layout_height="0dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/choose_items"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/black"
+                                        android:layout_width="0dp"
+                                        android:layout_marginRight="80dp"
+                                        android:layout_marginLeft="0dp"
+                                        android:textSize="12sp"
+                                        android:singleLine="true"
+                                        android:nextFocusDown="@+id/typess"
+                                        android:inputType="number"
+                                        android:paddingLeft="6sp"
+                                        android:layout_height="wrap_content" />
+
+                                    <Button
+                                        android:id="@+id/item"
+                                        android:layout_width="60dp"
+                                        android:text="@string/item"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/select_button"
+                                        android:layout_height="30dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_weight="2"
+                                            android:layout_width="match_parent"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textStyle="bold"
+                                            android:textSize="12sp"
+                                            android:text="Item Type"
+                                            android:layout_height="0dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="horizontal"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/typess"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black"
+                                                android:layout_width="0dp"
+                                                android:layout_marginRight="80dp"
+                                                android:layout_marginLeft="0dp"
+                                                android:textSize="12sp"
+                                                android:singleLine="true"
+                                                android:nextFocusDown="@+id/boring_pipe_qty"
+                                                android:inputType="number"
+                                                android:paddingLeft="6sp"
+                                                android:layout_height="wrap_content" />
+
+                                            <Button
+                                                android:id="@+id/type"
+                                                android:layout_width="60dp"
+                                                android:text="@string/type"
+                                                android:textSize="12sp"
+                                                android:background="@drawable/select_button"
+                                                android:layout_height="30dp" />
+
+                                        </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_weight="2"
+                                            android:layout_width="match_parent"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textStyle="bold"
+                                            android:textSize="12sp"
+                                            android:text="QTY. Uses"
+                                            android:layout_height="0dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="horizontal"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/boring_pipe_qty"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black"
+                                                android:layout_width="0dp"
+                                                android:layout_marginRight="80dp"
+                                                android:layout_marginLeft="0dp"
+                                                android:textSize="12sp"
+                                                android:singleLine="true"
+                                                android:nextFocusDown="@+id/diseal"
+                                                android:inputType="number"
+                                                android:paddingLeft="6sp"
+                                                android:layout_height="wrap_content" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_weight="2"
+                                            android:layout_width="match_parent"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textStyle="bold"
+                                            android:textSize="12sp"
+                                            android:text="Diseal"
+                                            android:layout_height="0dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="horizontal"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/diseal"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black"
+                                                android:layout_width="0dp"
+                                                android:layout_marginRight="80dp"
+                                                android:layout_marginLeft="0dp"
+                                                android:textSize="12sp"
+                                                android:singleLine="true"
+                                                android:nextFocusDown="@+id/skilled"
+                                                android:inputType="number"
+                                                android:paddingLeft="6sp"
+                                                android:layout_height="wrap_content" />
+
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="vertical"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_weight="2"
+                                                android:layout_width="match_parent"
+                                                android:textColor="@color/colorPrimary"
+                                                android:textStyle="bold"
+                                                android:textSize="12sp"
+                                                android:text="Man Power"
+                                                android:layout_height="0dp" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:orientation="horizontal"
+                                                android:focusable="true"
+                                                android:focusableInTouchMode="true"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_height="wrap_content">
+
+                                                <EditText
+                                                    android:id="@+id/skilled"
+                                                    android:layout_weight="1"
+                                                    android:textColor="@color/black"
+                                                    android:layout_width="0dp"
+                                                    android:layout_marginRight="80dp"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:textSize="12sp"
+                                                    android:hint="Skilled"
+                                                    android:singleLine="true"
+                                                    android:nextFocusDown="@+id/non_skilled"
+                                                    android:inputType="number"
+                                                    android:paddingLeft="6sp"
+                                                    android:layout_height="wrap_content" />
+
+                                                <EditText
+                                                    android:id="@+id/non_skilled"
+                                                    android:layout_weight="1"
+                                                    android:textColor="@color/black"
+                                                    android:layout_width="0dp"
+                                                    android:layout_marginRight="80dp"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:textSize="12sp"
+                                                    android:singleLine="true"
+                                                    android:hint="Non Skilled"
+                                                    android:inputType="number"
+                                                    android:paddingLeft="6sp"
+                                                    android:layout_height="wrap_content" />
+
+                                           </LinearLayout>
+                                           </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/submit_boring_report"
+                android:layout_width="match_parent"
+                android:text="@string/submit"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20sp"
+                android:layout_marginLeft="20sp"
+                android:background="@drawable/select_button"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="35dp"  />
+
+                               </LinearLayout>
+                             </LinearLayout>
+                           </LinearLayout>
+                         </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+     </LinearLayout>
+    </LinearLayout>
+</ScrollView>

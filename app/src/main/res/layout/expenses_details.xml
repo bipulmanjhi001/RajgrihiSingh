@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/add_exp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/expense_title"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/expense_item_name"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="text"
+            android:paddingLeft="10sp"
+            android:hint="@string/add_name"
+            android:layout_marginRight="10sp"
+            android:nextFocusDown="@+id/expense_date"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/add_expenses_item_name"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/expense_titles"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp"
+            android:background="@drawable/select_button"
+            android:layout_height="28dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/bill_date"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/expense_date"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="date"
+            android:hint="@string/click_type"
+            android:layout_marginRight="10sp"
+            android:paddingLeft="10sp"
+            android:nextFocusDown="@+id/bill_no"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/add_expenses_date"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/ex_date"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp"
+            android:background="@drawable/select_button"
+            android:layout_height="28dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/bill_no"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/bill_no"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="text"
+            android:textSize="12sp"
+            android:hint="@string/add_bill"
+            android:paddingLeft="10sp"
+            android:nextFocusDown="@+id/bill_name"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/click_bill"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/upload"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp"
+            android:background="@drawable/select_button"
+            android:layout_height="28dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/visible_bill"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+       <ImageView
+           android:id="@+id/show_img"
+           android:layout_width="250dp"
+           android:layout_margin="10dp"
+           android:layout_gravity="center"
+           android:layout_height="130dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/name"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/bill_name"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="text"
+            android:textSize="12sp"
+            android:hint="@string/y_name"
+            android:nextFocusDown="@+id/bill_amount"
+            android:paddingLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/Particulars"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/particular_name"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="text"
+            android:textSize="12sp"
+            android:hint="@string/part_ex"
+            android:nextFocusDown="@+id/bill_amount"
+            android:paddingLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/amt"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/bill_amount"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:inputType="number"
+            android:textSize="12sp"
+            android:hint="@string/total"
+            android:nextFocusDown="@+id/add_expenses"
+            android:paddingLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="Signature"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/add_sign"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="ADD SIGN"
+                android:layout_marginRight="20dp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="34dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_expenses"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:textSize="12sp"
+            android:background="@drawable/select_button"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

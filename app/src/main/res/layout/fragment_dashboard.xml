@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/sw_layout"
+    android:layout_above="@+id/footer"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ACCOUNT"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/footer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@drawable/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/di_name"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:text="M/S Rajgrihi Singh one of the best dealer in Jharkhand state for provide Pipe lining service."
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="14sp" />
+</LinearLayout>
+</RelativeLayout>

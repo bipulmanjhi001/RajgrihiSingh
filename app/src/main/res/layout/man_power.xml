@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+       <TextView
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:text="@string/skilled"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:textSize="14sp"
+           android:textColor="@color/colorPrimary"
+           android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/non_skilled"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/skilled_employee"
+                android:layout_width="match_parent"
+                android:hint="@string/enter__skilled"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:nextFocusLeft="@+id/non_skilled_employee"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#b5b5b5"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@drawable/list_selector"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/non_skilled_employee"
+                android:layout_width="match_parent"
+                android:hint="@string/enter_non_skilled"
+                android:layout_gravity="center"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#b5b5b5"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@drawable/list_selector"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/v_sign"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/laying_vendor_sign"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_width="match_parent"
+                    android:text="@string/select"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/select_button"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:layout_marginTop="10dp"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/a_sign"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/authorized_sign"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/select"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/select_button"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+
+       <ImageView
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_margin="10dp"
+                 android:layout_height="wrap_content" />
+
+            <ImageView
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_margin="10dp"
+                 android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

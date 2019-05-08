@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "157471241496",
+    "firebase_url": "https://rajgrihisingh-d873d.firebaseio.com",
+    "project_id": "rajgrihisingh-d873d",
+    "storage_bucket": "rajgrihisingh-d873d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157471241496:android:e2cc2b9071d1e26f",
+        "android_client_info": {
+          "package_name": "in.rajgrihisingh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157471241496-e9ivv73fspcoedcnqlq7stc8jgu7jdb6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.rajgrihisingh",
+            "certificate_hash": "e96918edd20ff416b3d31431657272226842de3a"
+          }
+        },
+        {
+          "client_id": "157471241496-o0etgd33bk3eje32det9tgqm6haadjrn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.rajgrihisingh",
+            "certificate_hash": "e2ec705d00e490d336d52080545a3ed91d104b0e"
+          }
+        },
+        {
+          "client_id": "157471241496-1tq3fd07h99ihf4024vtbhaf1dsooca4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPZ5egUG3wfFSZRCLEqLP3EaDidzl39BM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157471241496-1tq3fd07h99ihf4024vtbhaf1dsooca4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

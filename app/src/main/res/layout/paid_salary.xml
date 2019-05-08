@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/employee_title"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/employee_name"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:hint="@string/add_name"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/employee_name_click"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/employee"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="28dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/select_button"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/payroll_date"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/from_date"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="date"
+                android:hint="@string/from"
+                android:paddingLeft="10sp"
+                android:nextFocusDown="@+id/bill_no"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/from_date_click"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:visibility="invisible"
+                android:text="@string/ex_date"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10sp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="28dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/to"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/to_date"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="date"
+                android:textSize="12sp"
+                android:hint="@string/too"
+                android:paddingLeft="10sp"
+                android:nextFocusDown="@+id/bill_name"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/to_date_click"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/ex_date"
+                android:visibility="invisible"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10sp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="28dp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/visible_bill"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/show_img"
+                android:layout_width="250dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_height="130dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/pay_date"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/pay_date"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="date"
+                android:textSize="12sp"
+                android:hint="@string/ex_date"
+                android:paddingLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/pay_date_click"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/ex_date"
+                android:visibility="invisible"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10sp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="28dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/method"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/pay_method"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:hint="@string/methods"
+                android:nextFocusDown="@+id/bill_amount"
+                android:paddingLeft="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/get_type"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/type"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20sp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="28dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/no_days"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/av_salary"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:inputType="number"
+                android:textSize="12sp"
+                android:hint="0"
+                android:paddingLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/select_button"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/payroll_details"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@color/ColorPrimary"
+                android:layout_height="0.5sp"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/income"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/amt"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/deduction"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/amt"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/b_salary"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/basic_salary"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/deduction"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/ded_amt"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/o_income"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/other_amt"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/contribution"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/con_amt"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/total_income"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/total_inc"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/total_deduction"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/total_ded"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/get_calc"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:text=" Calculate "
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20sp"
+                    android:textSize="10sp"
+                    android:background="@drawable/select_button"
+                    android:layout_height="34dp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@string/net_pay"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/net_pay"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:hint="@string/set_zero"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/add_salary"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/add"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

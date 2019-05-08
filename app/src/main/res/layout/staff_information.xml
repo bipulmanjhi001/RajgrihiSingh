@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:scrollbars="none"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/staff_info"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/visible_staff"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_height="60dp"
+                android:src="@drawable/no_image_available"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/add_img"
+                android:layout_width="60dp"
+                android:background="@drawable/select_button"
+                android:text="@string/capture"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12dp"
+                android:layout_height="26dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/man_power"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/check_type"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/skill_type"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/skilled"
+                    android:checked="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/nonskill_type"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/nonskilled"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/staff_name"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_names"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:paddingLeft="6dp"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/join_date"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/date_of_joining"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:hint="@string/click_type"
+                android:inputType="date"
+                android:paddingLeft="6dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/add_date"
+                android:layout_width="60dp"
+                android:background="@drawable/select_button"
+                android:text="@string/dates"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12dp"
+                android:layout_height="26dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/f_staff_name"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/father_names"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:paddingLeft="6dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/age"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_age"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/sex"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+           <RadioGroup
+               android:id="@+id/sex_type"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_height="wrap_content">
+
+               <RadioButton
+                   android:id="@+id/m_sex_type"
+                   android:layout_width="wrap_content"
+                   android:textSize="12sp"
+                   android:text="@string/m_text"
+                   android:checked="true"
+                   android:textColor="@color/colorPrimary"
+                   android:layout_height="wrap_content" />
+
+               <RadioButton
+                   android:id="@+id/f_sex_type"
+                   android:layout_width="wrap_content"
+                   android:textSize="12sp"
+                   android:text="@string/f_text"
+                   android:textColor="@color/colorPrimary"
+                   android:layout_height="wrap_content" />
+
+           </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/email"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_email"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:paddingLeft="6dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/address"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_address"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:inputType="text"
+                android:lines="3"
+                android:paddingLeft="6dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/city"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_city"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:paddingLeft="6dp"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/state"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_state"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:inputType="text"
+                android:paddingLeft="6dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/mob"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/staff_mobile"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:paddingLeft="6dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/salary"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_salary"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:hint="@string/total"
+                android:paddingLeft="6dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/desg"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/staff_designation"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:paddingLeft="6dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/staff_data_save"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:text="@string/save"
+                android:background="@drawable/select_button"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

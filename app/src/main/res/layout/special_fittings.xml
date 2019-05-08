@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="26dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/f_text"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:text="@string/special"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/special_fitting_list"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@drawable/list_selector"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/s_text"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:text="@string/sluice"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/special_fitting_list2"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@drawable/list_selector"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/submit_fitting"
+        android:layout_width="match_parent"
+        android:text="@string/submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/select_button"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="35dp" />
+
+</LinearLayout>
+</ScrollView>

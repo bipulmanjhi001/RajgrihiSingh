@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:layout_margin="10sp"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="@string/l_date"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="0dp" />
+
+            <CalendarView
+                android:id="@+id/laying_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                android:theme="@style/CalenderViewCustom"
+                android:layout_gravity="center"
+                android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/laying_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:hint="@string/choose"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="@string/zone"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/zone"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="0dp"
+                android:paddingLeft="6sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/locations"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="@string/location"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/locations"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="0dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/nodes"
+                android:paddingLeft="6sp"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="@string/node"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/nodes"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="80dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/di_class_type"
+                android:paddingLeft="6sp"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/di_laying_name"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Select Item"
+                android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/di_class_item"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/select_button"
+                    android:text="@string/item"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/di_class_type"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="0dp"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/laying_type"
+                android:paddingLeft="6sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/di_class_types"
+                android:layout_width="60dp"
+                android:text="@string/type"
+                android:textSize="12sp"
+                android:background="@drawable/select_button"
+                android:layout_height="30dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="@string/laying"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/laying_type"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginLeft="0dp"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:nextFocusDown="@+id/submit_laying_report"
+                    android:inputType="number"
+                    android:paddingLeft="6sp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/submit_laying_report"
+                    android:layout_width="match_parent"
+                    android:text="@string/submit"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="35dp"  />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
