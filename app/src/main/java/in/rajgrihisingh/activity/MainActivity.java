@@ -1,6 +1,5 @@
 package in.rajgrihisingh.activity;
 
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;

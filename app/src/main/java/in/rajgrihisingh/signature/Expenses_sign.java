@@ -33,6 +33,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import in.rajgrihisingh.R;
+import in.rajgrihisingh.fragment.ExpensesDetails;
 import in.rajgrihisingh.model.VolleySingleton;
 
 import android.Manifest;
@@ -209,7 +210,10 @@ public class Expenses_sign extends Activity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        String image = getStringImage(newBitmap);
+        Intent intent=new Intent(Expenses_sign.this, ExpensesDetails.class);
+        intent.putExtra("sign",image);
+        startActivity(intent);
     }
 
     public String getStringImage(Bitmap bmp) {
@@ -243,7 +247,6 @@ public class Expenses_sign extends Activity {
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadImage();
                 dialog.dismiss();
                 onBackPressed();
             }
@@ -252,45 +255,5 @@ public class Expenses_sign extends Activity {
         dialog.show();
     }
 
-    private void uploadImage() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.URL_ADD_MANPOWER,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject obj = new JSONObject(response);
-
-                            if (obj.getBoolean("status")) {
-                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-
-                String image = getStringImage(newBitmap);
-                params.put("skilled", skilleds);
-                params.put("non_skilled", non_skilleds);
-                params.put("token", token);
-                params.put(sign, image);
-
-                return params;
-            }
-        };
-        VolleySingleton.getInstance(this).addToRequestQueue(stringRequest);
-    }
 }

@@ -70,6 +70,7 @@ public class ExpensesDetails extends Fragment implements View.OnClickListener {
     ArrayList expense_heads = new ArrayList();
     Bitmap bitmap;
     String image="";
+    String sign="";
     private Expenses.OnFragmentInteractionListener mListener;
     public ExpensesDetails() {
     }
@@ -96,6 +97,13 @@ public class ExpensesDetails extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.expenses_details, container, false);
 
+        Bundle bundle=getActivity().getIntent().getExtras();
+        if (bundle != null) {
+            sign = bundle.getString("sign");
+        }else {
+            sign="";
+        }
+
         add_expenses=(Button)view.findViewById(R.id.add_expenses);
         click_bill=(Button)view.findViewById(R.id.click_bill);
         expense_date=(EditText)view.findViewById(R.id.expense_date);
@@ -108,7 +116,6 @@ public class ExpensesDetails extends Fragment implements View.OnClickListener {
         visible_bill=(LinearLayout)view.findViewById(R.id.visible_bill);
         imageView=(ImageView)view.findViewById(R.id.show_img);
         add_expenses_date=(Button)view.findViewById(R.id.add_expenses_date);
-
 
         EnableRuntimePermission();
         click_bill.setOnClickListener(this);
@@ -330,6 +337,7 @@ public class ExpensesDetails extends Fragment implements View.OnClickListener {
                                 expense_item_name.setText("");
                                 visible_bill.setVisibility(View.GONE);
                                 image="";
+                                sign="";
 
                             }else {
                                 Toast.makeText(getActivity(), "Error",Toast.LENGTH_SHORT).show();
@@ -355,6 +363,7 @@ public class ExpensesDetails extends Fragment implements View.OnClickListener {
                 params.put("name", bill_names);
                 params.put("remarks", particular_names);
                 params.put("amount", bill_amounts);
+                params.put("sign", sign);
 
                 return params;
             }

@@ -43,6 +43,7 @@ public class ViewExpenses extends Fragment {
     private static final String SHARED_PREF_NAME = "Rajgrihisinghpref";
     String image;
     FloatingActionButton floatingActionButton;
+
     public ViewExpenses() {
     }
 
@@ -67,6 +68,7 @@ public class ViewExpenses extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.expense_view, container, false);
+
         expense_list = (ListView) view.findViewById(R.id.expense__list);
         expense_list.setDivider(null);
         pr_at_list = (ProgressBar) view.findViewById(R.id.expense_at_list);
@@ -82,7 +84,6 @@ public class ViewExpenses extends Fragment {
                 expenseListss.clear();
                 CallList();
                 ObjectAnimator.ofFloat(floatingActionButton, "rotation", 0f, 360f).setDuration(800).start();
-
             }
         });
 

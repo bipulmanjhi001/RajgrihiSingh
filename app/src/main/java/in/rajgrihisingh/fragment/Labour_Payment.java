@@ -49,6 +49,7 @@ public class Labour_Payment extends Fragment {
     private String mParam1;
     private String mParam2;
     private static final String SHARED_PREF_NAME = "Rajgrihisinghpref";
+    private static final String SHARED_PREF_NAME2 = "LabourSigns";
     String token,getId,labour_dates,labour_names,labour_amounts,labour_remarks,dates;
     EditText labour_date,labour_name,labour_amount,labour_remark;
     Button pay_date_click,labour_name_click,labour_date_click;
@@ -59,7 +60,7 @@ public class Labour_Payment extends Fragment {
     ArrayList types = new ArrayList();
     private int mYear, mMonth, mDay;
     Button add_sign;
-
+    String sign="";
     private OnFragmentInteractionListener mListener;
 
     public Labour_Payment() {
@@ -81,15 +82,20 @@ public class Labour_Payment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.labour_payment, container, false);
+
         SharedPreferences sp = getActivity().getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
         token=sp.getString("keyid", "");
+
+        SharedPreferences ls = getActivity().getSharedPreferences("Labour_Signs", MODE_PRIVATE);
+        sign=ls.getString("Labour_Sign", "");
+        Log.d("sign", sign);
 
         labour_date=(EditText)rootView.findViewById(R.id.labour_dates);
         labour_name=(EditText)rootView.findViewById(R.id.labour_names);
@@ -213,6 +219,9 @@ public class Labour_Payment extends Fragment {
                                 labour_name.setText("");
                                 labour_amount.setText("");
                                 labour_remark.setText("");
+                                sign="";
+                                SharedPreferences settings = getActivity().getSharedPreferences("Labour_Sign", MODE_PRIVATE);
+                                settings.edit().clear().apply();
 
                             } else {
                                 Toast.makeText(getActivity(), "Check details again.", Toast.LENGTH_SHORT).show();
@@ -238,6 +247,8 @@ public class Labour_Payment extends Fragment {
                 params.put("staff_id", getId);
                 params.put("amount", labour_amounts);
                 params.put("remarks", labour_remarks);
+                params.put("sign", sign);
+
                 return params;
             }
 
